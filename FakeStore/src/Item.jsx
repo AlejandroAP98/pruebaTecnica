@@ -1,28 +1,33 @@
+// eslint-disable-next-line 
+export default function Item({ titulo, precio, imagenes, descripcion, categoria }) {
+  // eslint-disable-next-line 
+  const descripcionPrevia = descripcion.length > 70 ? descripcion.substring(0, 70) + '...' : descripcion;
 
-// eslint-disable-next-line react/prop-types
-export default function Item({ titulo, precio, imagenes }) {
   return (
-    <section className="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    <section className="w-60 p-1 bg-white border border-gray-100 rounded-3xl drop-shadow-lg dark:bg-gray-900 dark:border-gray-800">
       <a href="#">
-        <img className="p-8 rounded-t-lg" src={imagenes[0]} alt={titulo} />
+        <img className="object-fill rounded-3xl hover:brightness-[1.05]" src={imagenes[0]} alt={titulo} />
       </a>
-      <div className="px-5 pb-5">
+      <div className="px-2 pb-2 py-1">
         <h1>
           <a href="#">
-            <h2 className="text-xl font-semibold text-gray-800 dark:text-white">{titulo}</h2>
+            <h2 className="md:text-xl font-bold text-gray-800 dark:text-cyan-300">{titulo}</h2>
+          </a>
+          <a href="#">
+            <p className="md:text-[10px] text-[8px] font-light text-gray-700 dark:text-gray-300">{descripcionPrevia}</p>
           </a>
         </h1>
+        <span className="bg-purple-100 text-purple-800 text-xs  me-2 px-2.5 py-0.5 rounded-xl dark:bg-purple-900 dark:text-purple-300">{categoria}</span>
+      </div>
+      <div className="px-3 pb-1">
         <a href="#">
-          <h5 className="text-xl tracking-tight text-gray-900 dark:text-white">Precio</h5>
+          <h5 className="md:text-sm tracking-tight text-gray-900 dark:text-white">Precio</h5>
         </a>
         <div className="flex items-center justify-between">
-          <span className="text-3xl font-bold text-gray-900 dark:text-white">$ {precio}</span>
-          <a href="#" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Add to cart</a>
+          <span className="md:text-2xl font-bold text-gray-900 dark:text-white">$ {precio}</span>
+          <a href="#" className="text-white bg-sky-500 rounded-md p-1 hover:bg-sky-400">Agregar</a>
         </div>
       </div>
     </section>
-    
   );
-
 }
-
