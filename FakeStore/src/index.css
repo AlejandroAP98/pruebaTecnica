@@ -2,7 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+
 body {
-    background-color: #020202;
+    background-color: #3d3d3d;
     color: #fff;
+    font-family: 'Comfortaa Variable', system-ui;
 }
