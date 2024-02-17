@@ -4,7 +4,8 @@
 
 
 body {
-    background-color: #3d3d3d;
+    background:radial-gradient(125% 125% at 60% 10%,#000 40%,#63e 100%);
     color: #fff;
+    color-scheme: dark;
     font-family: 'Comfortaa Variable', system-ui;
 }

@@ -91,7 +91,6 @@ function Modal({ isOpen, onClose, producto }) {
         })
         .then(response => response.json())
         .then(data => {
-            console.log('Producto actualizado:', data);
             setModoEdicion(false);
             setProductoDetalle(data);
             handleCloseModal();
