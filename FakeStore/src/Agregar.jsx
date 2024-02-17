@@ -65,9 +65,9 @@ const handleSubmit = (e) => {
   }, []);
 
   return (
-    <section className="flex flex-col gap-4 w-full items-center">
+    <section className="flex flex-col gap-4 w-full h-screen items-center">
       <h2 className="text-4xl font-bold">Crear un nuevo producto</h2>
-      <form onSubmit={handleSubmit} className="flex flex-col gap-4 ">
+      <form onSubmit={handleSubmit} className="flex flex-col py-4 gap-4 ">
         <label className="flex items-center md:justify-between">
           Title:
           <input
